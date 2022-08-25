@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Layout Liquido</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="container">
+		<!-- CABEÇALHO DO SITE-->
+		<header class="marca">
+			<h1>Marca</h1>
+		</header> 
+		<!-- FIM DO CABEÇALHO DO SITE-->	
+		<!-- INICIO DA AREA PRINCIPAL COM COTEUDO DO SITE-->
+		<div id="area-principal">
+			<nav class="menu-lateral">
+				<h1>Menu</h1>
+				<ul class="menu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html">Sobre</a></li>
+					<li><a href="index.html">Noticias</a></li>
+					<li><a href="index.html">Produto</a></li>
+					<li><a href="index.html">Serviços</a></li>
+					<li><a href="index.html">Contatos</a></li>
+					
+				</ul>
+			</nav>
+			<div class="area-conteudo">
+				<div class="conteudo1">
+					<h2>Conteudo 1</h2>
+					<br>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae imperdiet purus. Vivamus sed orci semper, rutrum odio at, dictum justo. Aenean congue vehicula diam ac consectetur. Maecenas ut blandit justo. Nullam neque erat, dignissim id tortor quis, tincidunt sagittis ante. Nulla sem augue, congue vel vehicula eget, sagittis accumsan mi. Praesent ipsum sapien, bibendum nec dignissim sit amet, mollis vel purus. Morbi non laoreet nisl.</p>
+					
+				</div>
+				<div class="conteudo2">
+					<h2>Conteudo 2</h2>
+					<br>
+					<p>Sed eget rutrum odio, at pharetra augue. Mauris vitae lacinia libero. Fusce efficitur, turpis sed condimentum aliquam, nisl lacus tempor metus, eu mollis felis quam ac erat. Duis arcu libero, mattis ut nulla in, finibus aliquam nunc. Donec dapibus viverra facilisis. Nulla tortor risus, elementum sed lobortis quis, lobortis eu ipsum.</p>
+					
+				</div>
+			</div>
+		</div>
+		<!-- FIM DA AREA PRINCIPAL COM COTEUDO DO SITE-->
+		<!-- INICIO DA AREA COM OS DADOS E REDES SOCIAIS DA EQUIPE-->
+		<div class="area-equipe">
+			<h2>Equipe</h2>
+			<div class="card">	
+				<div class="foto">
+					<img src="imagens\caique1.jpg" alt="Caique" >
+				</div>			
+							
+				
+				<div>
+					<h3>Caique Ferreira</h3>
+        			<h6 class="title">Desenvolverdor</h6>        			
+        			<br> 
+        			<br>
+        			<br>       			
+				</div>
+				<div>
+					<a class="redes" href="endereço da pagina Facebook" target="_blank">
+        				<img src="imagens\face.png" alt="facebook">
+        			</a>
+        			<a class="redes" href="endereço da pagina Instagram" target="_blank">
+        				<img src="imagens\insta.png" alt="instagram">
+        			</a>
+        			<a class="redes" href="endereço da pagina LinkedIn" target="_blank">
+        				<img src="imagens\link.png" alt="linkedin">
+        			</a>
+				</div>
+			</div>
+			
+		</div>
+		<!-- FIM DA AREA COM OS DADOS E REDES SOCIAIS DA EQUIPE-->
+		<!-- INICIO DA AREA COM O FORMULARIO DE CONTATO-->
+		<form>	
+			<div id="contato">			
+				<h2>Contato</h2>	
+				<div class="conteudo-contato">
+					<fieldset>
+						<div>
+							<label>Nome</label>
+							<input type="text" name="nome" placeholder="Digite seu primeiro nome.">
+						</div>
+
+						<div>
+							<label>Sobrenome</label>
+							<input type="text" name="sobrenome" placeholder="Digite seu sobrenome.">
+						</div>
+
+						<div>
+							<label>Email</label>
+							<input type="Email" name="email" placeholder="Digite seu email.">
+						</div>
+					</fieldset>
+
+					<div class="mensagem">
+						<label>Mensagem</label>
+						<textarea name="mensagem" cols="18" rows="11" placeholder="Digite sua mensagem.">
+						</textarea>
+					</div>	
+				</div>
+				<div class="button-contato">
+					<button type="submit">ENVIAR</button>
+				</div>				
+			</div>					
+		</form>		
+		<!-- INICIO DA AREA COM O FORMULARIO DE CONTATO-->
+		<!-- INICIO DA AREA DO RODAPÉ FIM DO CONTEUDO DO SITE-->
+		<footer>
+			<h5>Todos os direitos reservados</h5>
+		</footer>
+
+	</div>
+</body>
+</html>

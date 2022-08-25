@@ -1,0 +1,242 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+a{
+	text-decoration: none;
+}
+body {
+	background-color: #EAE3D2;
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	
+}
+#container {
+	
+	min-width: 1020px;
+	margin: 0 auto;
+	
+}
+
+
+.marca h1 {
+	padding-left: 10%;
+	background-color: #1C3879 ;
+	height: 56px;
+	color: #F9F5EB;
+	line-height: 56px;
+
+}
+#area-principal {
+
+	width: 80%;
+	margin: 0 auto;
+	
+}
+
+div .menu-lateral {
+	float: left;
+	width: 24%;
+	background-color: #607EAA;
+	border: 1px solid #607EAA;
+}
+
+.area-conteudo{
+	float: right;
+	width: 74%;
+
+}
+
+.conteudo1 {
+	float: left;
+	width: 64%;
+
+	/*border: 1px solid #607EAA;*/
+
+}
+
+.conteudo2 {
+	float: right;
+	width: 34%;
+	background-color: #F9F5EB;
+	/*border: 1px solid #607EAA;*/
+
+}
+
+/*.area-principal nav {
+	background-color: #607EAA;
+}*/
+
+footer {
+	margin-top: 0;
+	clear: both;
+	background-color: #1C3879 ;
+	color: #EAE3D2;
+	line-height: 36px;
+	text-align: center;
+
+}
+ /*Configuração Formulario de contato*/
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #1C3879;
+	clear: both;
+}
+
+#contato {
+	width: 50%;
+	height: 400px;
+	padding: 25px 25px;
+	margin: 35px auto;
+	background-color: #483D8B;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 15px;
+	
+}
+
+form h2 {
+	color: #F9F5EB;
+	text-align: center;
+	margin-top: 2px;
+	margin-bottom: 20 px;
+}
+
+.conteudo-contato{
+	display: flex;
+	height: 80%;
+	flex-flow: column wrap;
+}
+
+fieldset {
+ border: 0px;
+ margin: 30px;
+}
+
+#contato label, input {
+	display: block;
+}
+
+#contato label{
+	font-size: 16px;
+	color: #F9F5EB;
+}
+form input {
+	padding: 15px;
+	outline: none;
+	border: 0px;
+	margin-bottom:20px ;
+	transition: all 0.5s;
+	width: 75%;
+
+}
+
+form input:focus {
+	border-radius: 16px;
+}
+
+form textarea {
+	padding: 10px;
+	outline: none;
+	border: 0;
+	font-size: 15px;
+	margin-bottom: 30px;
+	transition: all 0.5s;
+	width: 75%;
+}
+form .mensagem {
+	margin-left: 30px;
+	margin-top: 30px;
+
+}
+
+form textarea:focus {
+	border-radius: 16px;
+}
+
+form button {
+	padding: 15px;
+	cursor: pointer;
+	font-size: 16px;
+	background: transparent;
+	border: 2px solid #F9F5EB;
+	color: #F9F5EB;
+	transition: all 0.5s;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+form button:hover {
+	background: #F9F5EB;
+	color: #483D8B;	
+}
+
+form .button-contato {
+	text-align: center;	
+}
+
+/*Fim da configuração Formulario de contato*/
+/*Configuração area da equipe de contato*/
+ .area-equipe {
+
+ 	display: flex;
+ 	flex-direction: column;
+ 	height: 380px;
+ 	text-align: center;
+	justify-content: center;
+	align-items: center;
+	background-color: #EAE3D2;
+	clear: both;
+	border: 2px solid red;
+	
+ }
+
+ .area-equipe h2 {
+ 	color: #1C3879;
+ 	margin-bottom: 20px;
+ }
+
+.area-equipe .card {
+
+	height: 78%;
+	width: 17%;
+	border-radius: 14px;
+	border: 2px solid red;
+}
+ .foto img {
+ 	margin: 10px 0;
+ 	max-width:100px;
+   max-height:120px;
+   width: auto;
+   height: auto;
+   border-radius: 50%;
+ 	}
+
+ .area-equipe .title {
+ 	color: #525252;
+ }
+
+ a img{
+ 	margin:  0 8px;
+ 	padding: 0;
+ 	
+ }
+
+ /*.area-equipe .card .foto {
+ 	max-width:50px;
+    max-height:70px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+ }
+*/
+
+/*
+MUDAR PALHETA DE CORES
+fundo:#F0F2F1
+texto: #010D1C
+detalhes: #ADEBFF
+*/
+    
