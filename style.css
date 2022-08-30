@@ -106,8 +106,39 @@ header div.menu ul li a:hover {
 #lateral {	
 	margin-right: 20px;
 	width: 24%;
-	border: 1px solid red;
+	border: 1px solid #D8D8D8;
 	
+}
+#lateral h2 {
+	text-align: center;
+	color: #010D1C;
+	background-color: #ADEBFF;
+}
+
+#lateral ul {
+	list-style: none;
+	background-color: #FAFAFA;
+}
+
+#lateral ul li {
+	/*border-top: 1px solid #D8D8D8;*/
+	
+}
+
+#lateral ul li a{
+	
+
+	padding: 10px;
+	display: block;	
+	color: #010D1C;
+	/*border: 1px solid #848484;*/
+}
+
+#lateral ul li a:hover {
+	padding-left: 22px ;
+	background: url(imagens/marcado.png) no-repeat left;	
+	color: #A4A4A4;
+		
 }
 
 #conteudo div {
