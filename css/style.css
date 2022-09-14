@@ -6,8 +6,9 @@
 
 
 /*CORES
-#010D1C - AZUL ESSCURO 
+#010D1C - AZUL ESCURO 
 #F9F5EB - COR CLARA
+#0B2B40 - AZUL ESCURO 1
 
 */
 a{
@@ -19,7 +20,7 @@ body {
 
 }
 #container {	
-	background: url(../imagens/modern-background.jpg) no-repeat fixed;
+	background: #0B2B40 url(../imagens/modern-background.jpg) no-repeat fixed;
 	background-size: cover;
   /*background-color: #F0F2F1;*/
 	width: 100%;
@@ -238,7 +239,7 @@ form {
 
 #contato {
 	width: 50%;
-	height: 410px;
+	height: 440px;
 	padding: 25px 25px;
 	margin: 35px auto;
 	background-color: #010D1C;
