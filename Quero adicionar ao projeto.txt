@@ -1,0 +1,11 @@
+- imagens 
+
+- menu fixo no topo ok 
+
+- Links GitHub ok 
+
+- Links Redes Sociais
+
+- background com imagem
+
+- Trocar a cor do menu topo

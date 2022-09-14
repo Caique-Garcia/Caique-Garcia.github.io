@@ -1,7 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
-	font-family: Consolas,monaco,monospace;
+	font-family: "Segoe UI",monaco;
 }
 a{
 	text-decoration: none;
@@ -149,10 +149,19 @@ header div.menu ul li a:hover {
 	border: 1px solid #D8D8D8;
 	
 }
-#lateral h2 {
-	text-align: center;
+#lateral span {
+	display: flex;
+	flex-direction: row;
+	padding: 3px;	
 	color: #010D1C;
 	/*background-color: #ADEBFF;*/
+}
+
+#lateral span img{
+	margin-left: 3px
+}
+#lateral span h2 {
+	margin-left: 15px;
 }
 
 #lateral ul {
@@ -187,12 +196,14 @@ header div.menu ul li a:hover {
 .conteudo1 {
 	color: #010D1C;
 	width: 64%;
+	border-radius: 0.5em;
 }
 
 .conteudo2 {
 	color: #010D1C;
 	width: 34%;
-	border: 1px solid reb;
+	
+	border-radius: 0.5em;
 
 }
 
@@ -342,6 +353,7 @@ form .button-contato {
 	width: 17%;
 	min-width: 170px;
 	background-color: #FAFAFA;
+	border-radius: 0.5em;
 	border: 2px solid #D8D8D8;
 
 }
@@ -397,4 +409,23 @@ fundo:#F0F2F1
 texto: #010D1C
 detalhes: #ADEBFF
 */
-    
+    /*PARALLAX PARA O FUNDO ANALISAR
+    .caixa1, .caixa2, .caixa3, .caixa4 {
+	position: relative;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+	EXEMPLO
+	
+.container {
+  background: url(../imagens/blue-background) #F0F2F1 repeat-y fixed;
+}
+
+.caixa1 {
+	background-image: url(../imagens/imagem1.jpg);
+	background-size: cover;
+	opacity: 0.7;
+	
+}*/
