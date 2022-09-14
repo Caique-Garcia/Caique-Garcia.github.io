@@ -3,6 +3,13 @@
 	padding: 0;
 	font-family: "Segoe UI",monaco;
 }
+
+
+/*CORES
+#010D1C - AZUL ESSCURO 
+#F9F5EB - COR CLARA
+
+*/
 a{
 	text-decoration: none;
 }
@@ -12,7 +19,9 @@ body {
 
 }
 #container {	
-  background-color: #F0F2F1;
+	background: url(../imagens/modern-background.jpg) no-repeat fixed;
+	background-size: cover;
+  /*background-color: #F0F2F1;*/
 	width: 100%;
 	margin: 0;	
 }
@@ -25,7 +34,7 @@ body {
  	width: 100%;
 
  	display: flex;
- 	background-color: #F0F2F1;
+ 	background-color: #010D1C;
  	flex-direction: row;
   justify-content: center;
   box-shadow: 0px 2px 10px 1px rgba(54,54,54,0.53);
@@ -40,7 +49,7 @@ body {
  .marca h1 {
 	padding-left: 27%;	
 	font-size: 30px;
-	color: #010D1C;
+	color: #F9F5EB;
 	line-height: 16px;
 }
 
@@ -69,15 +78,14 @@ body {
   }
 
 header div.menu ul li a {
-  color: #010D1C;  	  	
+  color: #F9F5EB;  	  	
   line-height: 56px;
   padding: 20px 16px;
 
 }
 
 header div.menu ul li a:hover {
-	color: #F0F2F1;
-	background-color: #010D1C;
+	opacity: 0.5;
 
 }
 
@@ -336,13 +344,14 @@ form .button-contato {
  	text-align: center;
 	justify-content: center;
 	align-items: center;
-	background-color: #F0F2F1;
+	background: transparent;
+	/*background-color: #F0F2F1;*/
 	clear: both;	
 	
  }
 
  .area-equipe h2 {
- 	color: #010D1C;
+ 	color: #F9F5EB;
  	margin-bottom: 20px;
 
  }
