@@ -46,6 +46,7 @@ header {
 	flex-direction: row;
  	justify-content: space-between;
  	font-size: 1em;
+ 	z-index: 5;
 
 }
 
