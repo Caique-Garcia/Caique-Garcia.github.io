@@ -1,0 +1,257 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: var(--main-font);
+}
+
+:root{
+	--cor-fundo: #0d1117 /*#17191E*/;
+	--cor-text: #F8FAFD;
+	--cor-text-escuro: #CFD6E4;
+	--cor-fundo-claro:  #1E2028;
+	--color-header-bg: #161b22;
+	/*radial-gradient(circle, #a8a8a8, #808081, #5a5b5b, #363838, #171817);*/
+	--main-font: 'Manrope', Helvetica, sans-serif;	
+
+}
+ 
+body{
+	background-color: var(--cor-fundo);
+	color: var(--cor-text);
+}
+
+a {
+	text-decoration: none;
+	color: var(--cor-text);
+}
+
+a:visited {
+	color: var(--cor-text);	
+}
+
+a:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+header {
+	background-color: var(--color-header-bg);
+	position: fixed;
+	margin-bottom: 20px;
+	width: 100%;
+	line-height: 40px;
+	height: 45px;
+	display: flex;
+	
+	flex-direction: row;
+ 	justify-content: space-between;
+ 	font-size: 1em;
+
+}
+
+nav a {
+	margin: 0 15px;
+}
+
+header nav {
+	margin-right: 10%;
+}
+
+header a.logo {
+	margin-left: 10%;
+}
+
+section {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+
+}
+
+.section1 {
+	justify-content: center;
+    align-items: center;
+}
+
+.button {
+	
+	padding: 5px;
+	background-color: var(--cor-text-escuro);
+	/*background-image: linear-gradient(to right top, #232425, #4a4c4d, #767979, #a6a8a7, #d9dad7);*/
+	border-radius: 50px;
+    -webkit-box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
+    box-shadow: 10px 10px 14px 1pxrgba(00,00,00,0.2);
+    /*position: relative;
+    top: 0;*/
+    transition: 0.3s ease;
+}
+span h3 {
+	color: var(--cor-fundo);
+}
+
+.button:hover {
+
+	letter-spacing: 0.8px;	
+	opacity: 0.8;
+}
+
+.section1 a {
+	display: flex;	
+	flex-direction: row;
+    align-items: center;
+}
+
+.section1 img {
+	margin-bottom: 3px;	
+}
+
+.section1 span {
+	margin-left: 10px;
+	line-height: 25px;
+}
+
+
+.habilidades,
+.apresentacao {
+	width: 30%;
+	height: 50%;
+	margin: auto;
+	
+}
+
+/*.habilidades {
+	border: 1px solid red;
+}*/
+
+.img {
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 35px;
+	margin-top: 115px;
+	/*animation: bounce 1s infinite alternate;
+  	-webkit-animation: bounce 1s infinite alternate;*/
+}
+
+.apresentacao h2,
+.habilidades h2{
+	text-align: center;
+
+}
+.apresentacao p {
+	padding: 0 8px;
+	text-align: justify;
+}
+
+.redes {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+	border-radius: 0.5em;
+	text-align: center;
+	
+}
+.redes span {
+	margin: 5px 25px;
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	background: transparent;
+	
+}
+
+.redes a {
+	margin: 8px;
+}
+.redes h2,
+.trabalhos h2 {
+	margin: 15px;
+}
+
+.trabalhos {
+	flex-direction: column;
+    align-items: center;
+	width: 81%;	
+	height: 75vh;
+	/*background-color: var(--cor-fundo-claro);*/
+	margin: 0 auto;
+	border-radius: 0.5em;
+}
+.cards {
+
+	width: 100%;
+	height: 80%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;	
+}
+.card{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20%;
+	height: 70%;
+	margin: auto;
+	background-image: linear-gradient(to right top, #141414, #121212, #0f0f0f, #0b0c0c, #080908);
+	/*-webkit-box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
+    box-shadow: 10px 10px 14px 1pxrgba(00,00,00,0.2);*/
+	
+}
+
+.card:hover {
+	opacity: 0.3;	
+}
+
+.card h2 {
+	margin-bottom: 55px;
+	text-transform: uppercase;
+}
+
+footer {
+	height: 35px;
+	display: block;
+	text-align: center;
+	margin: 25px;
+	padding: 0px;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-25px);
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-25px);
+  }
+}
+
+.ani1 {
+	animation: bounce 0.8s infinite alternate;
+  	-webkit-animation: bounce 0.8s infinite alternate;
+}
+
+.ani2{
+	animation: bounce 1s infinite alternate;
+  	-webkit-animation: bounce 1s infinite alternate;
+}
+
+.ani3{
+	animation: bounce 1.2s infinite alternate;
+  	-webkit-animation: bounce 1.2s infinite alternate;
+
+}
+
+
