@@ -69,22 +69,54 @@ section {
 
 }
 
+
+
 .section1 {
 	justify-content: center;
-    align-items: center;
+  align-items: center;
 }
 
-.button {
+.area-principal {
+	display: flex;
+	width: 75%;
+	height: 80%;
+	margin: auto;
+	flex-direction: row;
+	justify-content: center;	
 	
+}
+
+.area-git,
+.area-img {
+	margin: auto;
+	display: flex;
+	width: 40%;
+	height: 80%;
+	align-items: center;
+	justify-content: center;
+}
+
+.astronauta {
+	border-radius: 50%;
+	background: transparent;
+}
+
+.texto h2 {
+	font-size: 3em;
+}
+
+
+/*.button {
+	border: 1px solid red;
 	padding: 5px;
 	background-color: var(--cor-text-escuro);
-	/*background-image: linear-gradient(to right top, #232425, #4a4c4d, #767979, #a6a8a7, #d9dad7);*/
+	/*background-image: linear-gradient(to right top, #232425, #4a4c4d, #767979, #a6a8a7, #d9dad7);
 	border-radius: 50px;
-    -webkit-box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
-    box-shadow: 10px 10px 14px 1pxrgba(00,00,00,0.2);
-    /*position: relative;
-    top: 0;*/
-    transition: 0.3s ease;
+  -webkit-box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
+  box-shadow: 10px 10px 14px 1pxrgba(00,00,00,0.2);
+  position: relative;
+  top: 0;
+  transition: 0.3s ease;
 }
 span h3 {
 	color: var(--cor-fundo);
@@ -109,7 +141,7 @@ span h3 {
 .section1 span {
 	margin-left: 10px;
 	line-height: 25px;
-}
+}*/
 
 
 .habilidades,
