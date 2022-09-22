@@ -105,45 +105,6 @@ section {
 	font-size: 3em;
 }
 
-
-/*.button {
-	border: 1px solid red;
-	padding: 5px;
-	background-color: var(--cor-text-escuro);
-	/*background-image: linear-gradient(to right top, #232425, #4a4c4d, #767979, #a6a8a7, #d9dad7);
-	border-radius: 50px;
-  -webkit-box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
-  box-shadow: 10px 10px 14px 1pxrgba(00,00,00,0.2);
-  position: relative;
-  top: 0;
-  transition: 0.3s ease;
-}
-span h3 {
-	color: var(--cor-fundo);
-}
-
-.button:hover {
-
-	letter-spacing: 0.8px;	
-	opacity: 0.8;
-}
-
-.section1 a {
-	display: flex;	
-	flex-direction: row;
-    align-items: center;
-}
-
-.section1 img {
-	margin-bottom: 3px;	
-}
-
-.section1 span {
-	margin-left: 10px;
-	line-height: 25px;
-}*/
-
-
 .habilidades,
 .apresentacao {
 	width: 30%;
@@ -152,15 +113,11 @@ span h3 {
 	
 }
 
-/*.habilidades {
-	border: 1px solid red;
-}*/
-
 .img {
 	height: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	margin: 0 35px;
 	margin-top: 115px;
 	/*animation: bounce 1s infinite alternate;
@@ -230,10 +187,7 @@ span h3 {
 	width: 20%;
 	height: 70%;
 	margin: auto;
-	background-image: linear-gradient(to right top, #141414, #121212, #0f0f0f, #0b0c0c, #080908);
-	/*-webkit-box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
-    box-shadow: 10px 10px 14px 1pxrgba(00,00,00,0.2);*/
-	
+	background-image: linear-gradient(to right top, #141414, #121212, #0f0f0f, #0b0c0c, #080908);	
 }
 
 .card:hover {
