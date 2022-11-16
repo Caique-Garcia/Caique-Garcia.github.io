@@ -89,12 +89,21 @@ a:hover {
 		margin-top: 30px;
 	}
 
-	.apresentacao{
-		tab-size: 1em;
+	div.apresentacao{		
+		margin-top: 125px;
 	}
 
-	.redes{
-		margin: 0;
+	div.apresentacao div p {
+		font-size: 1.3em;
+	}
+
+
+	div.apresentacao div h2 {
+		font-size: 1.8em;
+	}
+
+	div.redes{
+		margin-top: 125px;
 		text-align: center;			
 		align-items: baseline;
 	}
@@ -115,8 +124,11 @@ a:hover {
 
 
 
+
+
 	#trabalhos,
-	.trabalhos h2 {
+	.trabalhos h2,
+	section.trabalho {
 		display: none;
 		/*border: 1px solid red;
 		display: flex;
