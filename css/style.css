@@ -104,6 +104,7 @@ a:hover {
 
 	div.redes{
 		margin-top: 125px;
+		margin-bottom: 125px;
 		text-align: center;			
 		align-items: baseline;
 	}
@@ -128,7 +129,7 @@ a:hover {
 
 	#trabalhos,
 	.trabalhos h2,
-	section.trabalho {
+	section.trabalhos {
 		display: none;
 		/*border: 1px solid red;
 		display: flex;
