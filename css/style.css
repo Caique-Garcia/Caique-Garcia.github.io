@@ -28,7 +28,7 @@
 }
 
 /*Tirando astrounatas para verções de telas menores*/
-@media (max-width:767px){
+@media (max-width:760px){
 	.astronautaCol{
 		display: none;
 	}
@@ -37,9 +37,17 @@
 		display: none;
 	}
 
-	.container{
-		padding-top: 50px;
+	#colVazia{
+		display: none;
 	}
+
+	#colAstronauta{
+		display: none;
+	}
+
+	/*.container{
+		padding-top: px;
+	}*/
 
 	img{
 		width: 15%;
