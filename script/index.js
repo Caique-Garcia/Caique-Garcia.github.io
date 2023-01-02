@@ -20,3 +20,21 @@ function changeStyle() {
 		btn_changeStyle.innerText = 'Light'
 	}
 }
+
+/*Melhorando responsividade*/
+let largura
+let areaPrincipal = document.getElementById('area_principal')
+let colunaVazia = document.getElementById('colunaVazia')
+let colAstronauta = document.getElementById('colAstronauta')
+
+function ajusta() {
+	/*Encontrando largura pagina*/
+	largura = window.innerWidth
+	console.log(largura)
+	if(largura<767){
+		areaPrincipal.className = 'col m-auto align-self-center'
+	}else{
+		areaPrincipal.className = 'col-7'
+	}
+}	
+
