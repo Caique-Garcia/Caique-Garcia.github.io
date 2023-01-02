@@ -54,7 +54,8 @@
 	}
 
 	p{
-		text-align: justify;		
+		text-align: justify;
+		padding: 15px;
 	}
 
 }
