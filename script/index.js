@@ -36,5 +36,6 @@ function ajusta() {
 	}else{
 		areaPrincipal.className = 'col-7'
 	}
-}	
+}
+ajusta()
 
