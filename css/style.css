@@ -1,0 +1,52 @@
+/*Animação astronauta*/
+.astronauta {
+	border-radius: 50%;
+	background: transparent;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-25px);
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-25px);
+  }
+}
+
+.ani1 {
+	animation: bounce 0.8s infinite alternate;
+  	-webkit-animation: bounce 0.8s infinite alternate;
+}
+
+/*Tirando astrounatas para verções de telas menores*/
+@media (max-width:767px){
+	.astronautaCol{
+		display: none;
+	}
+
+	.astronauta{
+		display: none;
+	}
+
+	.container{
+		padding-top: 50px;
+	}
+
+	img{
+		width: 15%;
+	}
+
+	p{
+		text-align: justify;		
+	}
+
+}

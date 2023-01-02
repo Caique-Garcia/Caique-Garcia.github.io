@@ -1,0 +1,22 @@
+/*Adicionando fonte*/
+@font-face {
+  font-family: 'DS_Digital';
+  src: url('../font//DS-DIGII.ttf') format('truetype');
+}
+
+button{
+	margin: 0.6em;
+}
+
+h1{
+	font-family:'DS_Digital' !important;
+	font-size: 4.5em;
+}
+
+#btn-changeStyle{
+	position: absolute;
+	left: 90%;
+    top: 5%;
+    transform: translate(-50%,-50%);
+}
+

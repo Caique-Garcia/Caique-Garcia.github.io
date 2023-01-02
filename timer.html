@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cronometro</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style_timer.css">	
+</head>
+<body class="bg-dark text-white">
+	<div class="container">
+		<button id="btn-changeStyle" type="button" class="btn btn-light" onclick="changeStyle()">White</button>
+		<a href="index.html" type="button" class="btn btn-success position-absolute top-0 start-0 m-3 ms-5">Voltar</a>
+		<div class="row justify-content-center 		
+		align-items-center
+		vh-100">
+			<div class="col-md-auto">
+				<h1 id="watch" class="text-center">00:00</h1>
+				<button class="btn btn-primary" type="button" onclick="start()">Start</button>
+				<button class="btn btn-secondary" type="button" onclick="pause()">Pause</button>
+				<button class="btn btn-danger" type="button" onclick="stop()">Stop</button>			
+			</div>
+		</div>
+	</div>
+	<script src="script/timer.js"></script>
+</body>
+</html>
