@@ -12,6 +12,9 @@ h1{
 	font-family:'DS_Digital' !important;
 	font-size: 4.5em;
 }
+body{
+	min-width: 280px;
+}
 
 #btn-changeStyle{
 	position: absolute;
@@ -20,3 +23,16 @@ h1{
     transform: translate(-50%,-50%);
 }
 
+@media (max-width:780px){
+	h1{
+		text-align: center;
+	}
+	button {
+		margin: auto;
+	}
+	#btns{
+		width: 100%;
+		text-align: center;
+		
+	}
+}
