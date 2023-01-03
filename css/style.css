@@ -51,11 +51,20 @@
 
 	img{
 		width: 15%;
+		margin-left: 11px;		
 	}
 
 	p{
 		text-align: justify;
-		margin: 15px;	
+		margin: 15px;		
+	}
+	h1{
+		text-align: center;
+
+	}
+
+	a{
+		margin: 15px;
 	}
 
 }
