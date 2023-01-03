@@ -1,3 +1,7 @@
+/*Adicionando largura minima*/
+body{
+	min-width: 290px;
+}
 /*Animação astronauta*/
 .astronauta {
 	border-radius: 50%;
