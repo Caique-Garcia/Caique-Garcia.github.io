@@ -10,6 +10,33 @@ class Despesa {
     }
 }
 
+/*Classe para receber objetos instanciados */
+class BD {
+
+    constructor(){
+        let id = localStorage.getItem('id')
+        if(id === null) {
+            localStorage.setItem('id',0)
+        }
+    }
+
+    getProximoId(){
+        /*Método para alterar o Id */
+        let proximoId = localStorage.getItem('id')
+        return parseInt(proximoId) + 1
+    }
+
+    gravar(d) {
+         let id = this.getProximoId()
+         localStorage.setItem('id',id)
+        /*Usando steItem para passar o nome do objeto e prodprio 
+        objeton em JSON*/
+        /*Usando JSON.stringfy para transformar objeito em um JSOSN valido */
+        localStorage.setItem(id, JSON.stringify(d))
+        console.log(d)
+    }
+}
+
 
 /*Função para cadastro de despesas*/
 function cadastrarDespesa(){
@@ -37,15 +64,11 @@ function cadastrarDespesa(){
         descricao.value,
         valor.value
     )
-    /*Gravando objeto no Local Storage */    
-    gravar(despesa)
+    /*Gravando objeto no Local Storage */ 
+    let bd = new BD   
+    bd.gravar(despesa)
 }
 
-function gravar(d) {
-    /*Usando steItem para passar o nome do objeto e prodprio 
-    objeton em JSON*/
-    /*Usando JSON.stringfy para transformar objeito em um JSOSN valido */
-    localStorage.setItem('despesa', JSON.stringify(d))
-}
+
 
 
