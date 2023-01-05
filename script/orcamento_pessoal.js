@@ -37,6 +37,15 @@ function cadastrarDespesa(){
         descricao.value,
         valor.value
     )
-
-    console.log(despesa)
+    /*Gravando objeto no Local Storage */    
+    gravar(despesa)
 }
+
+function gravar(d) {
+    /*Usando steItem para passar o nome do objeto e prodprio 
+    objeton em JSON*/
+    /*Usando JSON.stringfy para transformar objeito em um JSOSN valido */
+    localStorage.setItem('despesa', JSON.stringify(d))
+}
+
+
