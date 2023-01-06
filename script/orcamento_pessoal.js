@@ -8,6 +8,16 @@ class Despesa {
         this.descricao = descricao
         this.valor = valor
     }
+
+    validarDados(){
+        //Validando campos do objeot
+        for(let i in this){
+            if(this[i] == undefined || this[i] == '' || this[i] == null){
+                return false
+            }
+        }
+        return true
+    }
 }
 
 /*Classe para receber objetos instanciados */
@@ -65,8 +75,37 @@ function cadastrarDespesa(){
         valor.value
     )
     /*Gravando objeto no Local Storage */ 
-    let bd = new BD   
-    bd.gravar(despesa)
+    let bd = new BD  
+
+    //Recuperando elementos da Janela de resposta do registro
+    let modal = document.getElementById('modal')
+    let titleModal = document.getElementById('exampleModalLabel')
+    let textModal = document.getElementById('text')
+    let btnModal = document.getElementById('btn_modal')
+
+    //Caso a validação retorne true os dados serão gravados
+    if(despesa.validarDados()){
+        bd.gravar(despesa)
+
+        //Editando atributos da tela de resposta do registro
+        modal.className = 'modal-header text-success'
+        titleModal.textContent = 'Registro inserido com sucesso.'
+        textModal.textContent = 'Despesa gravada.'
+        btnModal.className = 'btn btn-success'
+        btnModal.textContent = 'Voltar'
+
+        //Função JQUERY com BootStrap para exibir elemento usando ID
+        $('#record').modal('show')
+    }else {
+        modal.className = 'modal-header text-danger'
+        titleModal.textContent = 'Erro na gravação.'
+        textModal.textContent = 'Existem campos obrigatórios que não foram preenchidos.'
+        btnModal.className = 'btn btn-danger'
+        btnModal.textContent = 'Voltar e corrigir'
+
+        $('#record').modal('show')
+    }
+    
 }
 
 
