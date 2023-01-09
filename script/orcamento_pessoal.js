@@ -45,8 +45,35 @@ class BD {
         localStorage.setItem(id, JSON.stringify(d))
         console.log(d)
     }
+
+    recuperarTodosRegistros(){
+        //array de despesas
+        let despesas = Array()
+
+        
+        let id = localStorage.getItem('id')
+        //Recuperar todas as despesas em LocalStorage
+        for(let i = 1; i <= id; i++){
+
+            //recuperar a despesa
+            //transformando JSON em objeto JavaScript
+            let despesa = JSON.parse(localStorage.getItem(i))
+           
+            //pular indices que foram removidos
+            if(despesa === null){
+                continue
+            }
+
+            //adicionando objeito no array 
+            despesas.push(despesa)
+
+        }
+        return despesas
+    }
 }
 
+/*Gravando objeto no Local Storage */ 
+let bd = new BD  
 
 /*Função para cadastro de despesas*/
 function cadastrarDespesa(){
@@ -74,8 +101,7 @@ function cadastrarDespesa(){
         descricao.value,
         valor.value
     )
-    /*Gravando objeto no Local Storage */ 
-    let bd = new BD  
+
 
     //Recuperando elementos da Janela de resposta do registro
     let modal = document.getElementById('modal')
@@ -106,6 +132,15 @@ function cadastrarDespesa(){
         $('#record').modal('show')
     }
     
+}
+
+//Exibir registros gravados na pagina consulta
+//Função serar chamada pelo onload do elemento body na pagina consiltas(assim que a pagina for aberta no navegador)
+function carregaListaDespesa(params) {
+    //recebendo array criado pelo método
+    let despesas = Array()
+    despesas = bd.recuperarTodosRegistros()
+    console.log(despesas)
 }
 
 
