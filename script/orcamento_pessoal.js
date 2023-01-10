@@ -108,7 +108,7 @@ class BD {
             despesasFiltradas = despesasFiltradas.filter(d => d.valor == despesa.valor)
         }
 
-        console.log(despesasFiltradas)
+        return despesasFiltradas
     }
 }
 
@@ -186,23 +186,17 @@ function cadastrarDespesa(){
 
 //Exibir registros gravados na pagina consulta
 //Função serar chamada pelo onload do elemento body na pagina consiltas(assim que a pagina for aberta no navegador)
-function carregaListaDespesa(params) {
-    //recebendo array criado pelo método
-    let despesas = Array()
-    despesas = bd.recuperarTodosRegistros()
-    //console.log(despesas)
+function carregaListaDespesa(despesas = Array(),filtro = false) {
+    
+    
+    if(despesas.length == 0 && filtro == false){
+     despesas = bd.recuperarTodosRegistros()
+    }
 
     //selecionando elemento onde vamos exibir a lista
     let listaDespesas = document.getElementById('listaDespesas')
-
-    /*Estrutura que vai receber os dados
-    <tr>
-        <td>Data</td>
-        <td>Tipo</td>
-        <td>Descrição</td>
-        <td>Valor</td>
-    </tr>
-    */
+    listaDespesas.innerHTML = ''
+    
    //Pecorre o array listando as despesas
    despesas.forEach(function (d) {
     //console.log(d)
@@ -248,8 +242,12 @@ function pesquisarDespesa() {
     let valor = document.getElementById('valor').value
 
     let despesa = new Despesa(ano,mes,dia,tipo,descricao,valor)
-    
-    bd.pesquisar(despesa)
+
+    //Recebendo array de despesas filtradas na variavel despesas
+    let despesas = bd.pesquisar(despesa)
+
+    //Exibir despesas filtradas
+    carregaListaDespesa(despesas, true)
 }
 
 
