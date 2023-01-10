@@ -70,6 +70,46 @@ class BD {
         }
         return despesas
     }
+    //método pesquisar
+    pesquisar(despesa){
+
+        let despesasFiltradas = Array()
+        despesasFiltradas = this.recuperarTodosRegistros()
+        console.log(despesasFiltradas)
+
+        //Filtros
+        //Ano
+        if(despesa.ano != ''){
+            despesasFiltradas = despesasFiltradas.filter(d => d.ano == despesa.ano)
+        }
+
+        //Mês
+        if(despesa.mes != ''){
+            despesasFiltradas = despesasFiltradas.filter(d => d.mes == despesa.mes)
+        }
+
+        //Dia
+        if(despesa.dia != ''){
+            despesasFiltradas = despesasFiltradas.filter(d => d.dia == despesa.dia)
+        }
+
+        //Tipo
+        if(despesa.tipo != ''){
+            despesasFiltradas = despesasFiltradas.filter(d => d.tipo == despesa.tipo)
+        }
+
+        //Descrição
+        if(despesa.descricao != ''){
+            despesasFiltradas = despesasFiltradas.filter(d => d.descricao == despesa.descricao)
+        }
+
+        //Valor
+        if(despesa.valor != ''){
+            despesasFiltradas = despesasFiltradas.filter(d => d.valor == despesa.valor)
+        }
+
+        console.log(despesasFiltradas)
+    }
 }
 
 /*Gravando objeto no Local Storage */ 
@@ -120,8 +160,18 @@ function cadastrarDespesa(){
         btnModal.className = 'btn btn-success'
         btnModal.textContent = 'Voltar'
 
+        
         //Função JQUERY com BootStrap para exibir elemento usando ID
         $('#record').modal('show')
+
+        //limpando os campos após a gravação
+        ano.value = ''
+        mes.value = ''
+        dia.value = ''
+        tipo.value = ''
+        descricao.value = ''
+        valor.value = ''
+
     }else {
         modal.className = 'modal-header text-danger'
         titleModal.textContent = 'Erro na gravação.'
@@ -140,7 +190,66 @@ function carregaListaDespesa(params) {
     //recebendo array criado pelo método
     let despesas = Array()
     despesas = bd.recuperarTodosRegistros()
-    console.log(despesas)
+    //console.log(despesas)
+
+    //selecionando elemento onde vamos exibir a lista
+    let listaDespesas = document.getElementById('listaDespesas')
+
+    /*Estrutura que vai receber os dados
+    <tr>
+        <td>Data</td>
+        <td>Tipo</td>
+        <td>Descrição</td>
+        <td>Valor</td>
+    </tr>
+    */
+   //Pecorre o array listando as despesas
+   despesas.forEach(function (d) {
+    //console.log(d)
+
+    //Criando linha (tr)
+    let linha = listaDespesas.insertRow()
+
+    //Criando as colunas (td)
+    linha.insertCell(0).innerHTML = `${d.dia}/${d.mes}/${d.ano}`
+    
+    //Ajuste do tipo
+    switch (parseInt(d.tipo)) {
+        case 1:
+            d.tipo = `Alimentação`            
+            break;
+        case 2:
+            d.tipo = `Educação`            
+            break;
+        case 3:
+            d.tipo = `Lazer`            
+            break;
+        case 4:
+            d.tipo = `Saúde`            
+            break; 
+        case 5:
+            d.tipo = `Transporte`            
+            break;   
+
+    }
+    linha.insertCell(1).innerHTML = `${d.tipo}`
+    linha.insertCell(2).innerHTML = `${d.descricao}`
+    linha.insertCell(3).innerHTML = `${d.valor}`
+   })
+}
+
+//função pesquisar 
+function pesquisarDespesa() {
+    let ano = document.getElementById('ano').value
+    let mes  = document.getElementById('mes').value
+    let dia = document.getElementById('dia').value
+    let tipo = document.getElementById('tipo').value
+    let descricao = document.getElementById('descricao').value
+    let valor = document.getElementById('valor').value
+
+    let despesa = new Despesa(ano,mes,dia,tipo,descricao,valor)
+    
+    bd.pesquisar(despesa)
 }
 
 
