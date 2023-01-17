@@ -195,7 +195,9 @@ function cadastrarDespesa(){
 //Função serar chamada pelo onload do elemento body na pagina consiltas(assim que a pagina for aberta no navegador)
 function carregaListaDespesa(despesas = Array(),filtro = false) {
     
-    
+    //Variavel para receber o valor total das despesas
+    let valorTotal = 0
+
     if(despesas.length == 0 && filtro == false){
      despesas = bd.recuperarTodosRegistros()
     }
@@ -237,6 +239,11 @@ function carregaListaDespesa(despesas = Array(),filtro = false) {
     linha.insertCell(2).innerHTML = `${d.descricao}`
     linha.insertCell(3).innerHTML = `${d.valor}`
 
+    //Buscando valor total das despesas
+    d.valor = d.valor.replace(",",".")
+    valorTotal += parseFloat(d.valor)
+    console.log(parseFloat(valorTotal))
+
     //Criar o botão de exclusão
     let btn = document.createElement("button")
     btn.className = 'btn btn-danger'
@@ -255,6 +262,14 @@ function carregaListaDespesa(despesas = Array(),filtro = false) {
     //Inserindo botão na linha
     linha.insertCell(4).append(btn) 
    })
+
+   //criando linha com total 
+   let linhaTotal = listaDespesas.insertRow()
+   linhaTotal.className = 'font-weight-bold'
+   linhaTotal.insertCell(0)
+   linhaTotal.insertCell(1)
+   linhaTotal.insertCell(2).innerHTML = `TOTAL:`   
+   linhaTotal.insertCell(3).innerHTML = `R$ ${parseFloat(valorTotal)}`
 }
 
 //função pesquisar 
